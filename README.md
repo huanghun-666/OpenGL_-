@@ -1,11 +1,11 @@
-[TOC]
+
 
 # 图元
 ## 一、基础管线
 OpenGL 中图元只不过是顶点的集合以预定义的方式结合在一起。
 管线分为2个部分：上半部分是客户机端，下半部分是服务器端。
 服务器和客户端是功能和运行上都是异步的，它们是各自独立的软件或硬件块。
-![屏幕快照 2018-03-22 16.50.09](media/15217084509860/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%2016.50.09.png)
+![](https://raw.githubusercontent.com/huanghun-666/OpenGL_-/master/2.png)
 * 客户端是存储在 CPU 存储器中的，并且在应用程序中执行，或者在主系统内存的驱动程序中执行。驱动程序会将渲染命令和数组组合起来，发送给服务器执行！（在一台典型的个人计算机上，服务器实际上就是图形加速卡上的硬件和内存）
 * 服务器和客户机在功能上也是异步的。它们是各自独立的软件块或硬件块。我们是希望它们2个端都尽量在不停的工作。客户端不断的把数据块和命令块组合在一起输送到缓冲区，然后缓冲区就会发送到服务器执行。
 * 如果服务器停止工作等待客户机，或者客户机停止工作来等待服务器做好接受更多的命令和准备，我们把这种情况称为管线停滞
@@ -49,7 +49,7 @@ void SetOrthographic(GLfloat xMin, GLfloat xMax, GLfloat yMin, GLfloat yMax, GLf
 ```
 
 ## 五、透视投影
-![](media/15217084509860/15217106213156.jpg)
+![](https://raw.githubusercontent.com/huanghun-666/OpenGL_-/master/1.jpg)
 透视投影会进行透视除法对距离观察者很远的对象进行缩放和收缩。在投影到屏幕之后，视景体背面与视景体正面的宽度测量标准不同。
 上图所示： 平头截体（frustum）的几何体，它的观察方向是从金字塔的尖端到宽阔端。观察者的视点与金字塔的尖端拉开一定距离。
 
@@ -155,7 +155,7 @@ void GLBatch::CopyNormalDataf(M3DVector3f *vNorms);
 void GLBatch::CopyColorData4f(M3DVector4f *vColors);
 void GLBatch::CopyTexCoordData2f(M3DVector2f *vTexCoords, GLuint uiTextureLayer);
 ```
-![屏幕快照 2018-03-22 18.03.50](media/15217084509860/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%2018.03.50.png)
+![](https://raw.githubusercontent.com/huanghun-666/OpenGL_-/master/3.png)
 
 
 
